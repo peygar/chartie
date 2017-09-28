@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 class DataPointInput extends Component {
+
     nameChangeHandler(e) {
         this.props.onNameChange(this.props.index, e.target.value);
     }

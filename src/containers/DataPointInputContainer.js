@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
+import DataPointInput from '../components/DataPointInput'
 
 class DataPointInputContainer extends Component {
-    getInitialState (){
-        return { dataPoints: [{name: "Column 1", value: 0}
-                            {name: "Column 2", value: 0}]
-                };
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            dataPoints: [
+                {name: "Column 1", value: 0},
+                {name: "Column 2", value: 0}
+            ]
+        };
     }
 
     handleDataPointNameChange(index, name) {
@@ -34,7 +40,7 @@ class DataPointInputContainer extends Component {
         var dataPoints = [];
         for (var i = 0; i < this.state.dataPoints.length; i++)
         {
-            dataPoints.push(<DataPoint
+            dataPoints.push(<DataPointInput
                 key={i}
                 index={i}
                 name={this.state.dataPoints[i].name}
@@ -55,11 +61,11 @@ class DataPointInputContainer extends Component {
         return (
             <div>
                 {dataPoints}
-                <button id="plus"
-                type="button"
-                onClick={this.handleNewDataPoint}>
-                    New Data Point
-                </button>
+                    <button id="plus"
+                        type="button"
+                        onClick={this.handleNewDataPoint.bind(this)}>
+                        New Data Point
+                    </button>
                 {pointDisplay}
             </div>
         );

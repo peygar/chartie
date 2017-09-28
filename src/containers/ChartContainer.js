@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import DataForm from '../components/DataForm'
 import BarChart from '../components/BarChart'
 
 class ChartContainer extends Component {
-
-    getInitialState() {
-        return {
+    constructor(props) {
+        super(props);
+        this.state = {
             title: "My Bar Chart",
             scale: 10,
             width: 400,
@@ -19,6 +20,7 @@ class ChartContainer extends Component {
     render() {
         return (
             <div>
+                <DataForm dataPoints={this.state.dataPoints}/>
                 <BarChart width='400px' height='400px'/>
             </div>
         );
