@@ -10,8 +10,8 @@ class ChartContainer extends Component {
             width: 400,
             height: 200,
             dataPoints: [
-            {name: "First Column", value: 0},
-            {name: "First Column", value: 0}
+                {name: "First Column", value: 0},
+                {name: "First Column", value: 0}
             ]
         };
     }
@@ -21,7 +21,7 @@ class ChartContainer extends Component {
             <div>
                 <BarChart width='400px' height='400px'/>
             </div>
-            );
+        );
     }
 }
 

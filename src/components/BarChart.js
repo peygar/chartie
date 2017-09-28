@@ -31,8 +31,7 @@ class BarChart extends Component {
 
     render() {
         return (
-            <svg width={this.props.width}
-            height={this.props.height}>
+            <svg width={this.props.width} height={this.props.height}>
                 {this.drawBar(10, 30, 0, 0, {fill:"#32BA3F"})}
                 {this.createTitle("My Graph")}
             </svg>
