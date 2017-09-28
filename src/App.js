@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './assets/logo.svg';
-import ChartContainer from './containers/ChartContainer.js'
+import ChartContainer from './containers/ChartContainer'
 import './stylesheets/App.css';
 
 class App extends Component {

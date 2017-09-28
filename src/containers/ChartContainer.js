@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BarChart from '../components/BarChart'
 
 class ChartContainer extends Component {
 
@@ -18,7 +19,7 @@ class ChartContainer extends Component {
     render() {
         return (
             <div>
-            <p>Chart Container</p>
+                <BarChart width='400px' height='400px'/>
             </div>
             );
     }
